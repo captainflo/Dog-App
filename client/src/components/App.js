@@ -1,8 +1,15 @@
 import React from 'react';
-import axios from 'axios';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Welcome from '../Screen/Welcome';
+import Breed from '../Screen/Breed';
 
 const App = () => {
-  return <div>Welcome Puppies</div>;
+  return (
+    <BrowserRouter>
+      <Route exact path="/" component={Welcome} />
+      <Route exact path="/breed/:id" component={Breed} />
+    </BrowserRouter>
+  );
 };
 
 export default App;
