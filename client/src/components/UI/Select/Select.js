@@ -20,9 +20,13 @@ const Select = ({ breeds }) => {
       fluid
       selection
       options={breedsOptions}
-      onChange={(e, { value }) => history.push(`/breed/${value}`)}
+      onChange={(e, { value }) =>
+        history.push({
+          pathname: `/breed/${value}`,
+          state: { breedName: e.target.textContent },
+        })
+      }
     />
   );
 };
-
 export default Select;

@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import * as actions from '../actions/index';
 import Loading from '../components/UI/Loading/Loading';
 import Select from '../components/UI/Select/Select';
-
+import Banner from '../components/UI/Banner/Banner';
+import './Welcome.css';
 const Welcome = (props) => {
   const dispatch = useDispatch();
 
@@ -16,8 +17,11 @@ const Welcome = (props) => {
 
   return (
     <div>
-      Welcome Puppies
-      {breeds ? <Select breeds={breeds} /> : <Loading />}
+      <Banner />
+      <div className="select">
+        <h2>Select Your Favorite Dog</h2>
+        {breeds ? <Select breeds={breeds} /> : <Loading />}
+      </div>
     </div>
   );
 };
