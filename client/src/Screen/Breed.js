@@ -6,7 +6,6 @@ import Card from '../components/UI/Card/Card';
 import './Breed.css';
 
 const Breed = (props) => {
-  console.log(props.location);
   const [isLoaded, setIsLoaded] = useState(false);
   const breed = useSelector((state) => state.breedList.breed);
   const dispatch = useDispatch();

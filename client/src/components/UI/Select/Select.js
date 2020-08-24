@@ -11,6 +11,7 @@ const Select = ({ breeds }) => {
       key: breeds[i].name,
       text: breeds[i].name,
       value: breeds[i].id,
+      group: breeds[i].breed_group,
     });
   }
 
